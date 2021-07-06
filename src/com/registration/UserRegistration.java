@@ -11,9 +11,9 @@ public class UserRegistration {
 		System.out.println("Enter Your PassWord::");
 		Scanner sc = new Scanner(System.in);
 		String password = sc.nextLine();
-		// gewwwwtv33
+		// Wffmkkm133
 
-		String regex = "^[a-zA-Z0-9]{8,}$";
+		String regex = "^[A-Z]{1}+[a-zA-Z0-9]{8,}$";
 
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
