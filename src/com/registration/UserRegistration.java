@@ -8,20 +8,20 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to User-Registration");
-		System.out.println("Enter Your Phone Number::");
+		System.out.println("Enter Your PassWord::");
 		Scanner sc = new Scanner(System.in);
-		String phoneNumber = sc.nextLine();
-		//91 7895809385
+		String password = sc.nextLine();
+		// gewwwwtv
 
-		String regex = "^[0-9]{2}\\s{0,1}[0-9]{10}$";
+		String regex = "^[a-zA-Z]{8,}$";
 
 		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(phoneNumber);
+		Matcher matcher = pattern.matcher(password);
 		boolean result = matcher.matches();
 		if (result)
-			System.out.println("Valid Phone Number!!!");
+			System.out.println("Valid Password!!!");
 		else
-			System.out.println("Invalid Phone Number!!!");
+			System.out.println("Invalid Password!!!");
 		sc.close();
 
 	}
