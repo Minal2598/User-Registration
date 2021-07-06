@@ -8,20 +8,20 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to User-Registration");
-		System.out.println("Enter Your Email ID::");
+		System.out.println("Enter Your Phone Number::");
 		Scanner sc = new Scanner(System.in);
-		String email = sc.next();
-		// abc.xyz@bl.co.in
+		String phoneNumber = sc.nextLine();
+		//91 7895809385
 
-		String regex = "^[a-zA-Z]+([.+-_][a-zA-Z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([a-zA-Z]+)*$";
+		String regex = "^[0-9]{2}\\s{0,1}[0-9]{10}$";
 
 		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(email);
+		Matcher matcher = pattern.matcher(phoneNumber);
 		boolean result = matcher.matches();
 		if (result)
-			System.out.println("Valid Email!!!");
+			System.out.println("Valid Phone Number!!!");
 		else
-			System.out.println("Invalid Email!!!");
+			System.out.println("Invalid Phone Number!!!");
 		sc.close();
 
 	}
